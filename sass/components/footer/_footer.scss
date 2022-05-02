@@ -1,0 +1,248 @@
+footer {
+  // small line separating footer from content
+  // margin-top: 6rem;
+  background-color: $color__primary;
+  color: $color__text;
+
+  //------------------------------------------------------Business Section Of Footer-----------------------------------------------------------//
+
+  .business-info {
+    // ---------------Inital element properties----------//
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    padding-top: 1.5rem;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "."
+      "."
+      ".";
+
+    article {
+      text-align: center;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .footer-icon-container a {
+      text-decoration: none;
+      color: $color__link-icon;
+
+      &:hover {
+        color: $color__link-hover;
+      }
+    }
+
+    .follow-us {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      align-items: baseline;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "h2 h2"
+        "footer-instagram footer-facebook";
+
+      .footer-instagram {
+        grid-area: footer-instagram;
+
+        svg {
+          fill: $color__link-icon;
+
+          &:hover {
+            fill: $color__link-hover;
+          }
+        }
+      }
+      .footer-facebook {
+        grid-area: footer-facebook;
+
+        svg {
+          fill: $color__link-icon;
+
+          &:hover {
+            fill: $color__link-hover;
+          }
+        }
+      }
+      h2 {
+        grid-area: h2;
+        text-align: center;
+      }
+    }
+
+    //-------------------------responsive layouts---------------------------------//
+    @include mqMin(28.125rem) {
+      .contact-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 0px 1.5rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "h2 h2"
+          "footer-phone footer-email";
+      }
+
+      .footer-phone {
+        grid-area: footer-phone;
+      }
+      .footer-email {
+        grid-area: footer-email;
+      }
+      h2 {
+        grid-area: h2;
+      }
+
+      .follow-us {
+        align-items: center;
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: 1fr;
+        gap: 0px 1rem;
+        grid-template-areas: "h2 footer-instagram footer-facebook";
+        .footer-instagram {
+          grid-area: footer-instagram;
+        }
+        .footer-facebook {
+          grid-area: footer-facebook;
+        }
+        h2 {
+          grid-area: h2;
+        }
+      }
+    }
+  } //--end business info-----//
+
+  @include mqMin(41.875rem) {
+    .business-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 0;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "hours-operation-container hours-operation-container"
+        "contact-us follow-us";
+
+      .hours-operation-container {
+        grid-area: hours-operation-container;
+      }
+      .contact-us {
+        grid-area: contact-us;
+      }
+      .follow-us {
+        grid-area: follow-us;
+      }
+
+      .follow-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        align-items: baseline;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "h2 h2"
+          "footer-instagram footer-facebook";
+
+        .footer-instagram {
+          grid-area: footer-instagram;
+        }
+        .footer-facebook {
+          grid-area: footer-facebook;
+        }
+        h2 {
+          grid-area: h2;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include mqMin(62.5rem) {
+    .business-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "contact-us follow-us hours-operation-container";
+    }
+
+    .hours-operation-container {
+      grid-area: hours-operation-container;
+    }
+
+    .contact-us {
+      grid-area: contact-us;
+    }
+
+    .follow-us {
+      grid-area: follow-us;
+    }
+  }
+  //-------------------------------------------------------Bottom Section Of Footer----------------------------------------------------------//
+  .site-info {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: $color__primary;
+    color: white;
+    p {
+      //   this is for the copyright text
+      margin: 0;
+    }
+    .footer-navigation {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          padding: 0.5rem;
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: $color__link-hover;
+          }
+        }
+      }
+    }
+  }
+
+  @include mqMin(45.625rem) {
+    .site-info {
+      padding: 1rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      p:first-child {
+        grid-column: 4;
+        grid-row: 1;
+        justify-self: end;
+        align-self: end;
+      }
+      .footer-navigation {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        ul {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  // Navigation styles are in _navigation.scss
+}

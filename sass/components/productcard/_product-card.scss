@@ -1,0 +1,116 @@
+/* General product card styles
+--------------------------------------------- */
+
+.product.type-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0;
+  box-shadow: $box-shadow-primary;
+  padding: 1rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  .onsale {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transform: rotate(-30deg);
+    color: red;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.1rem;
+    font-weight: bolder;
+  }
+  .woocommerce-loop-product__title {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .price {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Best Sellers product card styles
+--------------------------------------------- */
+
+.wp-block-product-best-sellers
+  .wc-block-grid__products {
+    margin: 0;
+  }
+
+.wp-block-product-best-sellers
+  .wc-block-grid__products
+  .wc-block-grid__product {
+  box-shadow: $box-shadow-primary;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: none;
+  .wc-block-grid__product-onsale {
+    visibility: none;
+    height: 0px;
+    border: none;
+    margin: 0;
+    position: static;
+    span {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      transform: rotate(-30deg);
+      color: red;
+      background-color: white;
+      border-radius: 50%;
+      padding: 0.1rem;
+      font-weight: bolder;
+    }
+  }
+  a {
+    position: relative;
+    text-decoration: none;
+    &:hover ~ .wc-block-grid__product-price span.amount {
+      // this is to replicate the same hover behavior as
+      // the other product cards
+      color: $color__link-hover;
+    }
+  }
+  .wc-block-grid__product-title {
+    font-family: $font__headings__primary;
+    font-size: 1.375rem;
+  }
+
+  .wc-block-grid__product-add-to-cart {
+    margin-bottom: 0;
+  }
+  .woocommerce-Price-amount {
+    color: $color__link;
+  }
+  .wc-block-grid__product-price {
+    margin-top: -1.2rem;
+  }
+}
+
+
+/* Category Select product card styles
+--------------------------------------------- */
+.product-category {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0;
+  box-shadow: $box-shadow-primary;
+  padding: 1rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+  }
+}

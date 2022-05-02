@@ -1,0 +1,200 @@
+#post-89 {
+  .entry-header {
+    position: relative;
+  }
+
+  .entry-title {
+    position: absolute;
+    z-index: 1000;
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .post-thumbnail img {
+    filter: brightness(50%);
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+
+  .entry-content {
+    margin-bottom: 3rem;
+
+    h2 {
+      text-align: center;
+      padding-top: 1.5rem;
+    }
+  }
+  
+  .question {
+    margin-bottom: 5rem;
+  }
+
+  @include mqMin(47rem) {
+    .entry-title {
+      font-size: 3rem;
+    }
+
+    .post-thumbnail img {
+      height: 60vh;
+    }
+  }
+
+  @include mqMin(64rem) {
+    .entry-title {
+      font-size: 3.5rem;
+    }
+
+    .post-thumbnail img {
+      height: 70vh;
+    }
+
+    .entry-content {
+      max-width: 65rem;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include mqMin(70rem) {
+    .entry-title {
+      font-size: 4.5rem;
+    }
+
+    .post-thumbnail img {
+      height: 70vh;
+    }
+
+    .entry-content {
+      max-width: 70rem;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+#primary .faq-category-wrapper {
+  display: flex;
+  flex-direction: column;
+  .getting-started {
+    order: -1;
+  }
+  .faq-category {
+    h2 {
+      background-color: $color__accent;
+      color: white;
+      padding: .5rem;
+    }
+
+    .faq-single-post {
+      background-color: $color__background-hr;
+      overflow: hidden;
+      summary {
+        padding: .5rem;
+        border: none;
+        cursor: pointer;
+      }
+
+      p {
+        border-radius: 0 0 10px 10px;
+        padding: 2px 6px;
+        margin: 0;
+      }
+
+      .faq-single-answer {
+        text-align: left;
+        box-shadow: $box-shadow-primary;
+      }
+    }
+
+    details[open] {
+      summary {
+        background-color: $color__link;
+        color: white;
+        box-shadow: $box-shadow-primary;
+      }
+
+      p {
+        animation: sweep 0.5s ease-in-out;
+      }
+    }
+
+    @keyframes sweep {
+      0% {
+        opacity: 0;
+        margin-left: -10px;
+      }
+      100% {
+        opacity: 1;
+        margin-left: 0px;
+      }
+    }
+  }
+  @include mqMin($tabletPortrait) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .booking-and-payment {
+      grid-column: 2 / 3;
+      grid-row: 1;
+    }
+    .getting-started {
+      grid-column: 1 / 2;
+      grid-row: 1;
+    }
+    .my-profile {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+    .shipping {
+      grid-column: 2 / 3;
+      grid-row: 2;
+    }
+    .trust-and-safety {
+      grid-column: 1 / 2;
+      grid-row: 3;
+    }
+  }
+
+  @include mqMin($tabletLandscape) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+
+    .booking-and-payment {
+      grid-column: 2 / 3;
+      grid-row: 1;
+    }
+    .getting-started {
+      grid-column: 1 / 2;
+      grid-row: 1;
+    }
+    .my-profile {
+      grid-column: 3 / 4;
+      grid-row: 1;
+    }
+    .shipping {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+    .trust-and-safety {
+      grid-column: 2 / 3;
+      grid-row: 2;
+    }
+  }
+}

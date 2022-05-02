@@ -1,0 +1,289 @@
+// Mobile Navigation
+
+#mobile-navigation {
+  // Initially hiding all the toggleable content and other elements.
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color__primary;
+  z-index: 90001;
+  height: 5.2813rem;
+  border-top: 2px solid #e6e6e6;
+  // removing ul styles on the ul containing the 4 icons
+  ul {
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    li {
+      list-style: none;
+    }
+  }
+  // setting up the search widget
+  ~ .widget {
+    margin: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -5rem;
+    z-index: 9000;
+    transition: all 0.2s ease-in-out;
+    font-family: $font__headings__secondary;
+    label {
+      display: none;
+    }
+  }
+  // mobile cart styles
+  .mobile-cart {
+    position: relative;
+
+    svg {
+      fill: #e6e6e6;
+
+      &:hover {
+        fill: $color__link-hover;
+      }
+    }
+
+    .count {
+      color: white;
+      background-color: $color__accent;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: 9px;
+      padding: 0.1rem 0.6rem;
+      font-weight: bolder;
+      font-family: $font__headings__secondary;
+    }
+  }
+
+  // Setting up the extended menu
+  ~ .menu-footer-extended-menu-container {
+    margin: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -30rem;
+    z-index: 9000;
+    transition: all 0.6s ease-in-out;
+    font-family: $font__cta;
+    background-color: $color__primary;
+    font-size: 1.35rem;
+    padding: 1rem;
+    a {
+      text-decoration: none;
+      color: $color__menu;
+
+      &:hover {
+        color: $color__link-hover;
+      }
+    }
+    ul {
+      padding-left: 0;
+      margin: 0;
+      li {
+        list-style: none;
+      }
+    }
+    // sub menu needs padding readded
+    ul.sub-menu {
+      padding-left: 2rem;
+    }
+  }
+  li button {
+    // remove all default button styles, including padding, border, background, etc.
+    padding: 0;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+  }
+
+  li button,
+  li a {
+    // Now I can style all the button and link elements simultaneously.
+    color: $color__link-text;
+    padding: 1rem;
+    svg {
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        color: $color__link-hover;
+      }
+    }
+  }
+
+  // Product Search Styles
+  &.search-open {
+    ~ .widget {
+      // shifts the search widget up into view
+      bottom: 5.2813rem;
+      z-index: 9001;
+
+      // Search Button
+      .wc-block-product-search__button {
+        margin: 0;
+        padding: 0.8rem;
+        background-color: white;
+        color: $color__link;
+        border: unset;
+        border-radius: 0;
+        border-left: 1px solid rgba(128, 128, 128, 0.1);
+      }
+
+      // Text Input
+      #wc-block-search__input-1 {
+        // remove inset border
+        border: unset;
+        border-radius: 0;
+      }
+    }
+  }
+
+  //   Mobile hamburger styles
+  li.mobile-hamburger button svg {
+    // hamburger icon needs to be a little larger than the others to look equal
+    width: 50px;
+    height: 50px;
+  }
+  &.menu-open {
+    ~ .menu-footer-extended-menu-container {
+      // shifts the extended menu up into view
+      bottom: 5rem;
+      z-index: 9001;
+    }
+  }
+}
+
+// Desktop Navigation
+#site-navigation {
+  display: none;
+  left: 0;
+  right: 0;
+  position: relative;
+  
+  .menu-header-menu-container {
+    position: relative;
+    height: 6.5rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    .sub-menu {
+      display: flex;
+      position: absolute;
+      left: -900rem;
+      margin-top: 3rem;
+      li {
+        margin-top: 15rem;
+        a {
+          padding: 1rem 1rem;
+          width: 140px;
+        }
+      }
+    }
+  }
+
+  .product_list_widget {
+    gap: 1rem;
+  }
+
+  #menu-header-menu {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+  }
+
+
+  .menu {
+    background-color: $color__primary;
+    li {
+      a {
+        // Styling link tags inside each li
+        // padding goes here to increase clickable area
+        padding: 3rem 1rem 2rem 1rem;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        background-color: $color__primary;
+        color: white;
+        display: block;
+        transition: background-color 0.1s ease-in-out;
+        &:hover,
+        &:focus,
+        &:active {
+          filter: brightness(1.2);
+          text-decoration: underline;
+          text-underline-offset: 5px;
+        }
+        &[aria-current="page"] {
+          text-decoration: underline $color__link-hover;
+          text-underline-offset: 7px;
+          text-decoration-thickness: 2px;
+        }
+      }
+    }
+  }
+
+  // Styling the sub menu
+  .menu-item-has-children {
+    position: relative;
+
+    // parent li will now have position relative
+    &:hover,
+    &.focus,
+    &:focus {
+      .sub-menu {
+        top: 56px;
+        left: auto;
+        z-index: 10000000000000000;
+        li {
+          margin: 0;
+          &#menu-item-340 {
+            a {
+              width: 158px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Header Navigation Cart Styles
+#site-header-cart {
+  display: none;
+}
+
+
+// Responsive Nav Styles
+// @include mqMin(45.625rem) {
+@include mqMin(48.125rem) {
+  #site-navigation {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    padding-right: 2rem;
+  }
+  #mobile-navigation {
+    display: none;
+  }
+  #site-header-cart {
+    top: 6.5rem;
+  }
+}
+
+@include mqMin(53.125rem) {
+  // Add in the cart
+  #site-header-cart {
+    display: block;
+  }
+}

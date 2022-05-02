@@ -1,0 +1,39 @@
+body {
+  /* Primary CTAS
+  --------------------------------------------- */
+  .wp-block-button__link.has-white-color.has-text-color.has-background {
+    @include ctaPrimaryStyles();
+  }
+
+  // Add to cart / read more CTA styles
+
+  #primary.site-main .product .cart button.single_add_to_cart_button,
+  a.add_to_cart_button,
+  #primary.site-main .product .product_type_simple {
+    @include ctaPrimaryStyles() {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  // Book a walker CTA Styles
+  a.book-a-walk {
+    @include ctaPrimaryStyles() {
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  /* Secondary CTAS
+  --------------------------------------------- */
+
+  .wp-block-button__link,
+  .is-style-outline > .wp-block-button__link:not(.has-background) {
+    // meet our staff CTA, faq CTA is styled here
+    @include ctaSecondaryStyles();
+  }
+  a.view-profile {
+    // meet the team view profile
+    @include ctaSecondaryStyles() {
+      padding: 0.4rem 1rem;
+    }
+  }
+}

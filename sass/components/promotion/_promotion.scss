@@ -1,0 +1,60 @@
+.logged-in {
+  #promotion-not-logged-in {
+    display: none !important;
+  }
+}
+
+body:not(.logged-in) {
+  #promotion-logged-in {
+    display: none !important;
+  }
+}
+
+.promotion-card {
+  padding: 1rem;
+  max-width: 40rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 3px;
+  position: relative;
+  margin: 0 auto 6rem;
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0;
+    text-shadow: $text-shadow;
+  }
+
+  p {
+    font-weight: 600;
+    width: 100%;
+  }
+
+  h2::after {
+    content: "🐾";
+    font-size: 2rem;
+    animation: wave 0.5s linear infinite;
+    animation-direction: alternate;
+    position: absolute;
+    text-shadow: none;
+    top: 0.25rem;
+  }
+
+  .wp-block-button {
+    text-align: center;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(-10deg);
+    }
+
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+}

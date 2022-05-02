@@ -1,0 +1,213 @@
+#primary .post-25 {
+  * p table {
+    font-family: $font__text;
+  }
+
+  .entry-title {
+    padding-left: 1rem;
+    font-family: $font__headings__primary;
+  }
+
+  .input-text,
+  .form-row {
+    width: 100%;
+  }
+
+  .woocommerce-form-coupon-toggle {
+    .woocommerce-info {
+      padding: 0;
+      font-family: $font__text;
+    }
+    .showcoupon {
+      padding: 1rem 1.5rem;
+      display: block;
+    }
+  }
+  .checkout_coupon.woocommerce-form-coupon {
+    button[name="apply_coupon"] {
+      @include ctaPrimaryStyles();
+    }
+    p.form-row input {
+      max-width: 240px;
+    }
+  }
+
+  .woocommerce-checkout-review-order-table {
+    table-layout: auto;
+    text-align: left;
+    font-family: $font__text;
+    .woocommerce-shipping-methods {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+
+  .wc_payment_methods {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: $font__text;
+
+    label {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .form-row {
+      margin: 0;
+    }
+  }
+  .wc-saved-payment-methods {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+  #place_order {
+    @include ctaPrimaryStyles {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .required {
+    text-decoration: none;
+  }
+
+  .woocommerce-shipping-methods {
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+
+    li {
+      display: grid;
+      grid-template-columns: 150px auto;
+      grid-template-rows: auto;
+      align-items: center;
+      justify-content: start;
+      input {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      label {
+        grid-column: 1;
+        grid-row: 1;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  #order_review {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+
+    .cart_item .product-total,
+    .product-total {
+      text-align: right;
+    }
+
+    thead {
+      background-color: $color__background-section;
+    }
+
+    .cart-subtotal {
+      background-color: $color__background-section;
+      td {
+        text-align: right;
+      }
+    }
+
+    .tax-total {
+      td {
+        text-align: right;
+      }
+    }
+
+    #shipping_method {
+      td {
+        align-items: right;
+      }
+    }
+
+    .order-total {
+      background-color: $color__background-section;
+      td {
+        text-align: right;
+      }
+    }
+  }
+
+  .entry-content {
+    padding-bottom: 5rem;
+
+    #wc-stripe-cc-form {
+      border: none;
+  
+      td li {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: end;
+      }
+    }
+  }
+
+  .tfoot,
+  .coupon-15for50discount {
+    text-align: right;
+
+    th {
+      text-align: left;
+    }
+  }
+
+  .tfoot,
+  th,
+  td,
+  tr {
+    padding: 0.5rem 0;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  @include mqMin(47rem) {
+    max-width: 35rem;
+    margin: 0 auto;
+
+    .showcoupon {
+      margin-top: .5rem;
+    }
+
+    .woocommerce-billing-fields__field-wrapper,
+    .woocommerce-shipping-fields__field-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      p {
+        margin: 0;
+      }
+
+      #billing_address_2,
+      #shipping_address_2 {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  @include mqMin(64rem) {
+    .woocommerce-billing-fields__field-wrapper,
+    .woocommerce-shipping-fields__field-wrapper {
+      max-width: 40rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+}

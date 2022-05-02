@@ -1,0 +1,21 @@
+.faq-section {
+  margin: 0 auto;
+  padding: 3rem 0 4rem 0;
+  border-bottom: 1px solid rgba(27, 31, 35, 0.15);
+  border-top: 1px solid rgba(27, 31, 35, 0.15);
+}
+@include mqMin(625px) {
+  .faq-section {
+    // padding: 2rem 20rem;
+    .wp-block-group__inner-container {
+      display: flex;
+      width: 40%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 0 auto;
+    }
+  }
+}
+
+

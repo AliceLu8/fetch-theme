@@ -1,0 +1,411 @@
+#post-57 {
+  .entry-header {
+    position: relative;
+  }
+
+  .entry-title {
+    position: absolute;
+    z-index: 1000;
+    font-size: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .post-thumbnail img {
+    filter: brightness(50%);
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  .entry-content {
+    padding: 0 0 7rem 0;
+
+    p {
+      padding: 1rem 1.25rem 0 1.25rem;
+    }
+
+    h2 {
+      text-align: center;
+      padding-top: 3rem;
+      margin: 0;
+    }
+
+    .owner {
+      background-color: $color__background-section;
+      padding: 1rem 1rem 0 1rem;
+
+      h3,
+      h4,
+      p {
+        margin: 0;
+      }
+
+      p {
+        padding: 1rem 0 1.5rem 0;
+      }
+
+      .meet-team-container {
+        // Spacing for each staff container
+        padding: 1rem .5rem 1.5rem .5rem;
+        margin-bottom: 3rem;
+        height: 100%;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        p {
+          padding-bottom: .5rem;
+        }
+
+        .ctas-wrapper {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .profile-container {
+            width: 10rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    .office-staff-wrapper {
+      h2 {
+        padding: 1rem 0;
+      }
+      .staff-item {
+        padding: 0 1.25rem 1rem 1.25rem;
+        h3,
+        h4,
+        p {
+          margin: 0;
+        }
+
+        h3 {
+          padding-top: 1rem;
+        }
+
+        p {
+          padding: 1rem 0 1.5rem 0;
+        }
+        
+        .meet-team-container {
+          box-shadow: $box-shadow-primary;
+          // Spacing for each staff container
+          padding: 1.5rem 1rem 1rem 1rem;
+          margin-bottom: 3rem;
+          height: 100%;
+
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+
+          .ctas-wrapper {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .profile-container {
+              width: 10rem;
+            }
+          }
+        }
+      }
+    }
+
+    .walker-wrapper {
+      h2 {
+        padding: 1rem 0;
+      }
+      .walker-item {
+        padding: 0 1.25rem 1rem 1.25rem;
+        h3,
+        h4,
+        p {
+          margin: 0;
+        }
+
+        h3 {
+          padding-top: 1rem;
+        }
+
+        p {
+          padding: 1rem 0 1rem 0;
+        }
+        
+        .meet-team-container {
+          box-shadow: $box-shadow-primary;
+          // Spacing for each staff container
+          padding: 1.5rem 1rem 1rem 1rem;
+          margin-bottom: 3rem;
+          height: 100%;
+
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+
+          // Center the view profile & book walker button
+          // Set width for two btn to match each other
+          .ctas-wrapper {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .profile-container {
+              width: 10rem;
+            }
+            .booking-container {
+              width: 10rem;
+              margin-right: 0;
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mqMin(28rem) {
+    .entry-title {
+      font-size: 2rem;
+    }
+
+    .office-staff-wrapper,
+    .walker-wrapper {
+      max-width: 25rem;
+      margin: 0 auto;
+    }
+  }
+
+  @include mqMin(43rem) {
+    p {
+      font-size: 1rem;
+    }
+    .entry-title {
+      font-size: 2.75rem;
+    }
+
+    .post-thumbnail img {
+      height: 55vh;
+    }
+
+    .entry-content {
+      p {
+        padding: 2rem 2.5rem;
+      }
+
+      .staff-intro {
+        padding: 0 2rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+
+      .owner {
+        .meet-team-container {
+          max-width: 30rem;
+          margin: 0 auto;
+          height: 100%;
+        }
+      }
+      
+      .office-staff-wrapper {
+        h2 {
+          padding: 4rem 0 1rem 0;
+        }
+      }
+      .office-staff-wrapper,
+      .walker-wrapper {
+        max-width: 30rem;
+        margin: 0 auto;
+
+        .meet-team-container {
+          max-width: 30rem;
+          margin: 0 auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @include mqMin(60rem) {
+    .entry-title {
+      font-size: 3.5rem;
+    }
+
+    .post-thumbnail img {
+      height: 60vh;
+    }
+
+    .entry-content {
+      p {
+        font-size: 1rem;
+        padding: 4rem 4.5rem 5rem 4.5rem;
+      }
+
+      .profile-container {
+        margin-top: 2rem;
+      }
+
+      .staff-intro {
+        height: 17rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+  
+      h4 {
+        font-size: 1.15rem;
+      }
+  
+      .owner {
+        .meet-team-container {
+          max-width: 50rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-bottom: 3rem;
+          height: 100%;
+  
+          .view-profile {
+            margin-top: 1rem;
+          }
+
+          .ctas-wrapper {
+            grid-column: 2/3;
+          }
+        }
+      }
+  
+      .office-staff-wrapper {
+        .staff-item {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: space-between;
+          gap: 4.5rem;
+    
+          .meet-team-container {
+            box-shadow: $box-shadow-primary;
+            padding: 1.5rem 0;
+            height: 100%;
+          }
+        }
+      }
+  
+      .walker-wrapper {
+        .walker-item {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: space-between;
+          gap: 4.5rem;
+    
+          .meet-team-container {
+            box-shadow: $box-shadow-primary;
+            padding: 1.5rem 0;
+            height: 100%;
+  
+            .ctas-wrapper {
+              flex-direction: row;
+              justify-content: center;
+              gap: 1rem;
+  
+              .profile-container {
+                margin-top: 0;
+              }
+              .booking-container {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+  
+      .office-staff-wrapper,
+      .walker-wrapper {
+        max-width: 55rem;
+        margin: 0 auto;
+
+        h2 {
+          padding-top: 3rem;
+        }
+      }
+    }
+  }
+
+  @include mqMin(70rem) {
+    p {
+      font-size: 1.15rem;
+    }
+
+    .entry-title {
+      font-size: 4.5rem;
+    }
+
+    .post-thumbnail img {
+      height: 70vh;
+    }
+
+    .entry-content {
+      padding-bottom: 10rem;
+      p {
+        padding: 3rem 7rem 3rem 7rem;
+      }
+
+      .profile-container {
+        margin-top: 0;
+      }
+
+      .staff-intro {
+        padding-bottom: 2rem;
+        height: 17rem;
+        margin: 0;
+      }
+
+      .office-staff-wrapper,
+      .walker-wrapper {
+        max-width: 65rem;
+        margin: 0 auto;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      .staff-item {
+        gap: 4rem;
+        .meet-team-container {
+          padding: 1.75rem 0;
+        }
+      }
+  
+      .walker-item {
+        gap: 4rem;
+
+        h2 {
+          padding-top: 8rem;
+        }
+        .meet-team-container {
+          padding: 1.75rem 0;
+        }
+      }
+    }
+  }
+}

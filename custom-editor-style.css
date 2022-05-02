@@ -1,0 +1,364 @@
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+summary,
+textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: CircularStdBlack, "sans-serif";
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.375rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  color: #1e7fd9;
+  background-color: unset;
+  text-decoration: none;
+}
+mark:hover,
+ins:hover {
+  color: #63b4ff;
+}
+
+big {
+  font-size: 125%;
+}
+
+@font-face {
+  font-family: CircularStdBlack;
+  src: url("./fonts/circular-converted/CircularStd-Black.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: CircularStdBold;
+  src: url("./fonts/circular-converted/CircularStd-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: CircularStdBook;
+  src: url("./fonts/circular-converted/CircularStd-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+/* Elements
+--------------------------------------------- */
+body {
+  background: #fff;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+body {
+  /* Primary CTAS
+	--------------------------------------------- */
+  /* Secondary CTAS
+	--------------------------------------------- */
+}
+body .wp-block-button__link.has-white-color.has-text-color.has-background {
+  font-family: CircularStdBook, "sans-serif";
+  background-color: #67b34f;
+  color: white;
+  border-radius: 9px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  filter: brightness(1.1);
+}
+body
+  .wp-block-button__link.has-white-color.has-text-color.has-background:hover {
+  filter: brightness(1);
+  color: white;
+}
+body
+  .wp-block-button__link.has-white-color.has-text-color.has-background:active {
+  filter: brightness(1);
+}
+body
+  .wp-block-button__link.has-white-color.has-text-color.has-background:focus-visible {
+  border: 4px solid #63b4ff;
+}
+body #primary.site-main .product .cart button.single_add_to_cart_button,
+body a.add_to_cart_button,
+body #primary.site-main .product .product_type_simple {
+  font-family: CircularStdBook, "sans-serif";
+  background-color: #67b34f;
+  color: white;
+  border-radius: 9px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  filter: brightness(1.1);
+  padding: 0.5rem 1rem;
+}
+body #primary.site-main .product .cart button.single_add_to_cart_button:hover,
+body a.add_to_cart_button:hover,
+body #primary.site-main .product .product_type_simple:hover {
+  filter: brightness(1);
+  color: white;
+}
+body #primary.site-main .product .cart button.single_add_to_cart_button:active,
+body a.add_to_cart_button:active,
+body #primary.site-main .product .product_type_simple:active {
+  filter: brightness(1);
+}
+body
+  #primary.site-main
+  .product
+  .cart
+  button.single_add_to_cart_button:focus-visible,
+body a.add_to_cart_button:focus-visible,
+body #primary.site-main .product .product_type_simple:focus-visible {
+  border: 4px solid #63b4ff;
+}
+body a.book-a-walk {
+  font-family: CircularStdBook, "sans-serif";
+  background-color: #67b34f;
+  color: white;
+  border-radius: 9px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  filter: brightness(1.1);
+  padding: 0.4rem 1rem;
+}
+body a.book-a-walk:hover {
+  filter: brightness(1);
+  color: white;
+}
+body a.book-a-walk:active {
+  filter: brightness(1);
+}
+body a.book-a-walk:focus-visible {
+  border: 4px solid #63b4ff;
+}
+body .wp-block-button__link,
+body .is-style-outline > .wp-block-button__link:not(.has-background) {
+  font-family: CircularStdBook, "sans-serif";
+  background-color: #8757b2;
+  color: white;
+  border-radius: 9px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  filter: brightness(1.1);
+}
+body .wp-block-button__link:hover,
+body .is-style-outline > .wp-block-button__link:not(.has-background):hover {
+  filter: brightness(1);
+}
+body .wp-block-button__link:active,
+body .is-style-outline > .wp-block-button__link:not(.has-background):active {
+  filter: brightness(0.9);
+}
+body .wp-block-button__link:focus-visible,
+body
+  .is-style-outline
+  > .wp-block-button__link:not(.has-background):focus-visible {
+  border: 4px solid #63b4ff;
+}
+body a.view-profile {
+  font-family: CircularStdBook, "sans-serif";
+  background-color: #8757b2;
+  color: white;
+  border-radius: 9px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  filter: brightness(1.1);
+  padding: 0.4rem 1rem;
+}
+body a.view-profile:hover {
+  filter: brightness(1);
+}
+body a.view-profile:active {
+  filter: brightness(0.9);
+}
+body a.view-profile:focus-visible {
+  border: 4px solid #63b4ff;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+  color: #1e7fd9;
+  font-family: CircularStdBook, "sans-serif";
+}
+a:visited {
+  color: #1e7fd9;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #63b4ff;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}

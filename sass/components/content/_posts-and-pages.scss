@@ -1,0 +1,47 @@
+.sticky {
+  display: block;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary,
+section.error-404 {
+  // this works for all of our pages and posts (not including the shop)
+  // we need to do one custom style for the contact page
+  padding: .5rem 1rem 0 1rem;
+
+  h2 {
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+}
+
+#post-19 {
+  .entry-content {
+    margin: 1.5rem 0 0 0;
+  }
+}
+
+#post-26 {
+  margin-bottom: 5rem;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5rem;
+}
+
+@include mqMin(62.5rem) {
+  .page-content,
+  .entry-content,
+  .entry-summary,
+  section.error-404 {
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+}

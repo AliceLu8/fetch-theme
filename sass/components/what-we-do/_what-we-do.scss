@@ -1,0 +1,98 @@
+//mobile default block (reset the wordpress applied flex)
+
+.wp-block-columns {
+  display: unset;
+  display: block;
+  margin-bottom: 6rem;
+}
+
+@include mqMin(52.1875rem) {
+  .wp-block-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    align-items: baseline;
+  }
+}
+@include mqMin(76.25rem) {
+  .wp-block-columns {
+    padding: 0 8rem;
+  }
+}
+
+//This resets a propety that causes the column in mobile to be misaligned with eachother
+.wp-block-columns:not(.is-not-stacked-on-mobile)
+  > .wp-block-column:not(:first-child) {
+  margin: unset;
+}
+
+.what-we-do {
+  max-width: 25rem;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 15px;
+  border: solid 1px rgb(211, 207, 207);
+  overflow: hidden;
+  box-shadow: $box-shadow-secondary;
+  background-color: white;
+  height: 600px;
+
+  h3 {
+    max-width: 100%;
+    background-color: $color__accent;
+    margin: 0;
+    padding: 0.5rem 0;
+    color: white;
+  }
+
+  h4 {
+    margin-top: -3.4rem;
+    background-color: black;
+    padding: 0.5rem .5rem;
+    color: white;
+    @include mqMin(23.125rem) {
+      padding: 0.5rem 0;
+    }
+    z-index: 2;
+    position: relative;
+  }
+
+  .city {
+    margin-top: -3.15rem;
+  }
+  .breeds {
+    margin-top: -3.4rem;
+  }
+  // .lazyloaded {
+  //   height: 25rem;
+  // }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+}
+
+.we-love-dogs-description {
+  margin-top: 3rem;
+  text-align: left;
+  padding: 0 0.5rem;
+  @include mqMin(23.125rem) {
+    margin-top: 0rem;
+  }
+}
+
+.dogs-love-us-description {
+  margin-top: 3rem;
+  text-align: left;
+  padding: 0 0.5rem;
+  @include mqMin(20.125rem) {
+    margin-top: 0rem;
+  }
+}
+
+//Responsive layouts

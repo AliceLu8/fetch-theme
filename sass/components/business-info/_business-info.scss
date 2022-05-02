@@ -1,0 +1,95 @@
+// Footer business info section
+.business-info, 
+.hours-operation-container, 
+.icons-container, 
+.phone-container,
+.email-container,
+.footer-menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.business-info {
+    padding: 1rem 0;
+
+    h2 {
+        font-size: 1.25rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    & * {
+    margin: 0 0 1rem 0; 
+    }
+    .icons-container {
+        margin: 0;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        .phone-container,
+        .email-container {
+            margin-bottom: 0;
+        }
+    }
+
+    .hours-operation-container {
+        padding-bottom: 1rem;
+    }
+
+    @include mqMin(60rem){
+        h2 {
+            font-size: 1.35rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @include mqMin(70rem){
+
+        h2 {
+            font-size: 1.45rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.footer-menus {
+    margin-bottom: 2rem;
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    @include mqMin(60rem){
+        h2 {
+            font-size: 1.35rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @include mqMin(70rem){
+        h2 {
+            font-size: 1.45rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}

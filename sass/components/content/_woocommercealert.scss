@@ -1,0 +1,54 @@
+//Woocommerce message export style
+#primary .woocommerce-message, .woocommerce-info, 
+.woocommerce-error, .woocommerce-noreviews,
+.p.no-comments {
+    margin: 0.5rem ;
+    padding: 0;
+    
+    li {
+        list-style: none; 
+        text-align: center
+    }
+
+    .button {
+        @include blockViewCart{
+        };
+    }
+
+    .button::after {
+        content: " ";
+    }
+    
+    @include mqMin($tabletPortrait) {
+        .button {
+            @include inlineViewCart{
+            };
+        }
+    }
+}
+
+#primary .woocommerce-message, 
+#primary .woocommerce-noreviews {
+    background-color: $color__background-screen;
+    color: $color__WMC-primary;
+
+    .button {
+        float: right;
+    }
+}
+#primary .woocommerce-info {
+    a {
+        color: $color__WMC-secondary;
+        text-shadow: $text-shadow;
+    }
+}
+
+#primary .woocommerce-error {
+    background-color: $color__background-screen;
+    color: $color__WMC-primary;
+    
+    .button {
+        float: right;
+    }
+}
+

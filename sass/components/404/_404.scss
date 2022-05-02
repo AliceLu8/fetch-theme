@@ -1,0 +1,23 @@
+body.error404 {
+  section.error-404,
+  .page-header {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  .page-header {
+    h1 {
+      margin: 0 0 1rem 0;
+      font-family: $font__cta;
+      font-size: 2rem;
+    }
+    p {
+      margin: 0 0 1rem 0;
+    }
+    @include mqMin(45.625rem) {
+      h1 {
+        margin: 1rem 0;
+      }
+    }
+  }
+}

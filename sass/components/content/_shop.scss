@@ -1,0 +1,17 @@
+.woocommerce.archive,
+.woocommerce.single-product {
+  main {
+    padding: 1.5rem 1rem 0 1rem;
+    max-width: 85rem;
+    margin: 0 auto;
+
+    @include mqMin(43.75rem) {
+      padding: 2rem 2rem 0 2rem;
+    }
+
+    @include mqMin(68.75rem) {
+      padding: 2rem 4rem 0 4rem;
+    }
+  }
+
+}

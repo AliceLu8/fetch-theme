@@ -1,0 +1,376 @@
+/**
+ * Star rating
+ */
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1.618em;
+  line-height: 1.618;
+  width: 5.3em;
+  font-family: star;
+  font-weight: 400;
+
+  &::before {
+    content: "\53\53\53\53\53";
+    opacity: 0.25;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+  }
+
+  span::before {
+    content: "\53\53\53\53\53";
+    top: 0;
+    position: absolute;
+    left: 0;
+    color: $color__link;
+  }
+}
+
+p.stars {
+  a {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    text-indent: -999em;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 1px;
+    font-weight: 400;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      font-family: star;
+      content: "\53";
+      color: $color__text-main;
+      text-indent: 0;
+      opacity: 0.25;
+    }
+
+    &:hover {
+      ~ a::before {
+        content: "\53";
+        color: $color__text-main;
+        opacity: 0.25;
+      }
+    }
+  }
+
+  &:hover {
+    a {
+      &::before {
+        content: "\53";
+        color: $color__link;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.selected {
+    a.active {
+      &::before {
+        content: "\53";
+        color: $color__link;
+        opacity: 1;
+      }
+
+      ~ a::before {
+        content: "\53";
+        color: $color__text-main;
+        opacity: 0.25;
+      }
+    }
+
+    a:not(.active) {
+      &::before {
+        content: "\53";
+        color: $color__link;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/**
+ * Tabs
+ */
+.woocommerce-tabs {
+  margin: 1rem 0;
+  .entry-content {
+    margin-bottom: 0;
+  }
+  ul.tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 .5rem 0;
+    display: flex;
+    li {
+      display: block;
+      margin: 0;
+      position: relative;
+      padding: 0 .5rem;
+      &.active {
+        color: $color__secondary;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        a {
+          color: $color__link-visited;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+      }
+
+      a {
+        padding: 0.5rem 0 0.2rem 0;
+        display: block;
+        font-size: 1rem;
+        text-decoration: none;
+        color: $color__text-dark;
+      }
+    }
+  }
+
+  .panel {
+    border: 4px solid $color__secondary;
+    h2:first-of-type {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+/**
+ * Password strength meter
+ */
+.woocommerce-password-strength {
+  text-align: right;
+
+  &.strong {
+    color: $woocommerce__color-success;
+  }
+
+  &.short {
+    color: $woocommerce__color-error;
+  }
+
+  &.bad {
+    color: $woocommerce__color-error;
+  }
+
+  &.good {
+    color: $woocommerce__color-info;
+  }
+}
+
+/**
+ * Forms
+ */
+.form-row {
+  &.woocommerce-validated {
+    input.input-text {
+      box-shadow: inset 2px 0 0 $woocommerce__color-success;
+    }
+  }
+
+  &.woocommerce-invalid {
+    input.input-text {
+      box-shadow: inset 2px 0 0 $woocommerce__color-error;
+    }
+  }
+}
+
+.required {
+  color: #f00;
+}
+
+#primary .woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+.p.no-comments {
+  margin: 0;
+  padding: 0.5rem;
+  font-family: $font__text;
+  margin-bottom: 2rem;
+
+  li {
+    list-style: none;
+    text-align: center;
+  }
+}
+
+#primary .woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+.p.no-comments {
+  .button,
+  a {
+    @include blockViewCart {
+    }
+    margin: 0.5rem 1rem;
+  }
+
+  @include mqMin($tabletPortrait) {
+    .button,
+    a {
+      @include inlineViewCart {
+      }
+      margin: 0 1rem;
+    }
+  }
+}
+
+#primary .woocommerce-message {
+  background-color: $color__background-section;
+  color: $color__WMC-primary;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  a {
+    color: $color__CTA-primary;
+    text-shadow: $text-shadow;
+    font-weight: bold;
+  }
+}
+
+#primary .woocommerce-noreviews {
+  background-color: $color__background-section;
+  color: $color__WMC-primary;
+}
+
+#primary .woocommerce-error {
+  background-color: $color__background-section;
+  color: $color__WMC-secondary;
+  display: flex;
+  order: 0 -1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: left;
+
+  @include mqMin($desktopMedium) {
+    max-width: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.demo_store {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 1em;
+  background-color: $woocommerce__color-info;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 48em) {
+  /**
+	 * Header cart
+	 */
+  .site-header-cart {
+    a.cart-contents {
+      &::before {
+        // Replacing the anchor tag with a cart icon
+        content: " ";
+        background-image: url("./icons/basket2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: invert(100%) sepia(100%) saturate(14%) hue-rotate(212deg)
+          brightness(104%) contrast(104%);
+        display: flex;
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-top: 2.5rem;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  .widget_shopping_cart {
+    display: none;
+    position: absolute;
+    top: 6.5rem;
+    right: 0;
+    z-index: 1000000;
+    background-color: white;
+    padding: 1rem;
+    border: 3px solid $color__primary;
+    .woocommerce-mini-cart-item.mini_cart_item {
+      // Each item flexes as a column
+      // then inside the image / price anchor tag
+      // it flexs again but in row direction
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+      .remove.remove_from_cart_button {
+        // remove from cart button is removed entirely
+        display: none;
+      }
+      .remove.remove_from_cart_button + a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // kind of hacky but i use negative margin to bring the anchor tag up closer to the image
+        margin-bottom: -1rem;
+        img {
+          height: 65px;
+          width: 65px;
+          margin-right: 1rem;
+        }
+      }
+      span {
+        font-family: $font__text;
+        text-align: right;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .woocommerce-mini-cart__total {
+      margin: 1rem 0;
+    }
+    .woocommerce-mini-cart__buttons {
+      // checkout gets primary CTA styles
+      // view cart gets secondary styles
+      margin-top: 1rem;
+      a.wc-forward:not(.checkout) {
+        @include ctaSecondaryStyles() {
+          padding: 0.3rem 0.4rem;
+          margin-right: 0.8rem;
+        }
+      }
+      a.checkout {
+        @include ctaPrimaryStyles() {
+          padding: 0.3rem 0.4rem;
+        }
+      }
+    }
+  }
+}
+.site-header-cart li:hover .widget_shopping_cart {
+  // hovering over the li displays the cart
+  // selected the li so that you don't lose focus when moving the mouse
+  // from the cart down into the UL
+  display: block;
+}

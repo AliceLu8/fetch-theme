@@ -1,0 +1,49 @@
+
+#post-19 {
+
+    #wpforms-159 {
+        // Contact form box width
+        width: 300px;
+        border: 1px solid $color__background-hr;
+
+        .wpforms-field-container {
+            padding: 1rem .5rem;
+            height: 33rem;
+
+            // Input areas background color
+            #wpforms-159-field_1 {
+                background-color: $color__background-hr;
+            }
+            #wpforms-159-field_1-last {
+                background-color: $color__background-hr;
+            }
+            #wpforms-159-field_3 {
+                background-color: $color__background-hr;
+            }
+            #wpforms-159-field_4 {
+                background-color: $color__background-hr;
+            }
+            #wpforms-159-field_5 {
+                background-color: $color__background-hr;
+            }
+            #wpforms-159-field_6 {
+                background-color: $color__background-hr;
+            }
+        }
+        
+        // Submit button styling
+        div.wpforms-submit-container {
+            display: flex;
+            justify-content: end;
+            padding: 0 1rem 1rem 0;
+
+            button {
+                background-color: $color__background-button;
+                border-color: $color__border-button;
+                border-radius: 10px;
+            }
+
+            
+        }
+    }
+}

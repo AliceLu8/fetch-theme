@@ -1,0 +1,32 @@
+.site-header {
+  display: grid;
+  grid-template-columns: minmax(auto, 15rem) minmax(auto, 100rem);
+  background-color: $color__primary;
+
+  .site-branding {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+
+    .custom-logo-link {
+      margin-bottom: 0;
+      width: 75px;
+      height: auto;
+    }
+
+    .site-title {
+      position: relative;
+      left: -2.5rem;
+      bottom: -.8rem;
+      margin: 0 0 0 0.75rem;
+      font-family: $font__headings__primary;
+      font-size: 2rem;
+      font-weight: 800;
+
+      a {
+        text-decoration: none;
+        color: $color__logo__text;
+      }
+    }
+  }
+}

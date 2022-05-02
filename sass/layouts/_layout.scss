@@ -1,0 +1,11 @@
+#page {
+  max-width: 100%;
+  margin: 0 auto 5rem;
+  overflow: hidden;
+}
+
+@include mqMin(45.625rem) {
+  #page {
+    margin: 0 auto;
+  }
+}

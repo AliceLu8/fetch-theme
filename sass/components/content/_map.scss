@@ -1,0 +1,24 @@
+#primary .wpgmza_map {
+  border-radius: 15px;
+  box-shadow: $box-shadow-primary;
+}
+
+#primary .ol-overlaycontainer-stopevent {
+  button {
+    display: none;
+  }
+}
+.ol-attribution {
+  display: none;
+}
+
+#wpgmza_map {
+  pointer-events: none;
+  max-width: 40rem;
+  max-height: 20rem;
+  margin: 0 auto;
+}
+
+.map-section {
+  margin-bottom: 6rem;
+}

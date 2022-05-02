@@ -1,0 +1,84 @@
+#post-19 {
+  #wpforms-159 {
+    // Contact form box width
+    border: 1px solid $color__background-hr;
+    padding: 1rem 0;
+    font-family: $font__text;
+    margin-bottom: 6rem;
+    border-radius: 5px;
+    box-shadow: $box-shadow-primary;
+    // Contact form labels width
+    .wpforms-field-medium {
+      max-width: 100%;
+    }
+
+    .wpforms-field-container {
+      padding: 1rem 0.5rem;
+      height: 33rem;
+
+      // Input areas background color
+      #wpforms-159-field_1 {
+        background-color: $color__background-hr;
+      }
+      #wpforms-159-field_1-last {
+        background-color: $color__background-hr;
+      }
+      #wpforms-159-field_3 {
+        background-color: $color__background-hr;
+      }
+      #wpforms-159-field_4 {
+        background-color: $color__background-hr;
+      }
+      #wpforms-159-field_5 {
+        background-color: $color__background-hr;
+      }
+      #wpforms-159-field_6 {
+        background-color: $color__background-hr;
+      }
+
+      @include mqMin(43rem) {
+        padding: 0 2rem;
+      }
+
+      @include mqMin(60rem) {
+        padding: 0 2.75rem;
+      }
+
+      @include mqMin(70rem) {
+        padding: 0 3rem;
+      }
+    }
+
+    // Submit button styling
+    div.wpforms-submit-container {
+      display: flex;
+      justify-content: end;
+      padding: 0 1rem 0 0;
+
+      button {
+        @include ctaPrimaryStyles;
+      }
+
+      @include mqMin(43rem) {
+        padding: 0 3rem;
+      }
+
+      @include mqMin(60rem) {
+        padding: 0 3.75rem;
+      }
+
+      @include mqMin(70rem) {
+        padding: 0 4rem;
+      }
+    }
+
+    // Responsive max-width on the form container
+    @include mqMin(43rem) {
+      max-width: 35rem;
+    }
+
+    @include mqMin(60rem) {
+      max-width: 45rem;
+    }
+  }
+}

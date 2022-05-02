@@ -1,0 +1,50 @@
+table.shop_table_responsive {
+  thead {
+    display: none;
+    font-family: $font__text;
+  }
+
+  tbody {
+    font-family: $font__text;
+    th {
+      display: none;
+    }
+  }
+
+  tr {
+    td {
+      display: block;
+      text-align: right;
+      clear: both;
+
+      &::before {
+        content: attr(data-title) "";
+        float: left;
+      }
+
+      &.product-remove {
+        a {
+          text-align: left;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &.actions,
+      &.download-actions {
+        &::before {
+          display: none;
+        }
+      }
+
+      &.download-actions {
+        .button {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

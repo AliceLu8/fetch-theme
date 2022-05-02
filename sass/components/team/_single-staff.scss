@@ -1,0 +1,96 @@
+.single-fetch-staff {
+  // Single staff
+  .entry-content {
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+
+    .single-staff-container {
+      margin: 0 auto;
+      margin-bottom: 5rem;
+      width: auto;
+      padding: 0.5rem 1rem;
+      box-shadow: $box-shadow-primary;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 2rem;
+      }
+
+      .single-staff-intro {
+        height: 100%;
+        // Styling for name, role, description section
+        h3,
+        h4 {
+          margin: 0;
+        }
+
+        h3 {
+          padding-top: 2rem;
+        }
+
+        a {
+          margin-top: 1rem;
+          margin-bottom: -0.5rem;
+        }
+
+        p {
+          padding: 1rem 0 0 0;
+        }
+
+        .book-btn {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      @include mqMin(43rem) {
+        max-width: 30rem;
+        margin-bottom: 5rem;
+
+        .single-staff-intro {
+          padding: 0 1.5rem;
+        }
+      }
+
+      @include mqMin(60rem) {
+        max-width: 40rem;
+
+        h3 {
+          font-size: 1.25rem;
+        }
+
+        h4 {
+          font-size: 1.15rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      @include mqMin(70rem) {
+        max-width: 45rem;
+
+        .single-staff-intro {
+          padding: 0 3rem;
+        }
+      }
+    }
+
+    // Testimonial spacing
+    .testimonial-container {
+      margin-bottom: 7rem;
+
+      h3 {
+        text-align: center;
+      }
+
+      @include mqMin(43rem) {
+        margin: 0 auto;
+        max-width: 30rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+body,
+button,
+input,
+select,
+optgroup,
+summary,
+textarea {
+  font-family: $font__text;
+  font-size: 1rem;
+  line-height: $font__line-height-body;
+}
+
+@import "headings";
+@import "copy";
+
+//  Primary Headings
+@font-face {
+  font-family: CircularStdBlack;
+  src: url("./fonts/circular-converted/CircularStd-Black.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+//  Secondary Headings
+@font-face {
+  font-family: CircularStdBold;
+  src: url("./fonts/circular-converted/CircularStd-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+//  Call To Actions
+@font-face {
+  font-family: CircularStdBook;
+  src: url("./fonts/circular-converted/CircularStd-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}

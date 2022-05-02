@@ -1,0 +1,417 @@
+.woocommerce-MyAccount-navigation {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  grid-template-areas:
+    "woocommerce-MyAccount-navigation-link--dashboard -woocommerce-MyAccount-navigation-link--orders"
+    "woocommerce-MyAccount-navigation-link--subscriptions woocommerce-MyAccount-navigation-link--downloads"
+    "woocommerce-MyAccount-navigation-link--bookings woocommerce-MyAccount-navigation-link--account-wishlists"
+    "woocommerce-MyAccount-navigation-link--wc-smart-coupons woocommerce-MyAccount-navigation-link--edit-address"
+    "woocommerce-MyAccount-navigation-link--payment-methods woocommerce-MyAccount-navigation-link--edit-account"
+    "woocommerce-MyAccount-navigation-link--customer-logout woocommerce-MyAccount-navigation-link--customer-logout";
+}
+
+.woocommerce-MyAccount-navigation li {
+  list-style: none;
+}
+
+.woocommerce-MyAccount-navigation a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.woocommerce-MyAccount-navigation-link--dashboard {
+  grid-area: woocommerce-MyAccount-navigation-link--dashboard;
+}
+.woocommerce-MyAccount-navigation-link--orders {
+  grid-area: -woocommerce-MyAccount-navigation-link--orders;
+}
+.woocommerce-MyAccount-navigation-link--subscriptions {
+  grid-area: woocommerce-MyAccount-navigation-link--subscriptions;
+}
+.woocommerce-MyAccount-navigation-link--downloads {
+  grid-area: woocommerce-MyAccount-navigation-link--downloads;
+}
+.woocommerce-MyAccount-navigation-link--bookings {
+  grid-area: woocommerce-MyAccount-navigation-link--bookings;
+}
+.woocommerce-MyAccount-navigation-link--account-wishlists {
+  grid-area: woocommerce-MyAccount-navigation-link--account-wishlists;
+}
+.woocommerce-MyAccount-navigation-link--wc-smart-coupons {
+  grid-area: woocommerce-MyAccount-navigation-link--wc-smart-coupons;
+}
+.woocommerce-MyAccount-navigation-link--edit-address {
+  grid-area: woocommerce-MyAccount-navigation-link--edit-address;
+}
+.woocommerce-MyAccount-navigation-link--payment-methods {
+  grid-area: woocommerce-MyAccount-navigation-link--payment-methods;
+}
+.woocommerce-MyAccount-navigation-link--edit-account {
+  grid-area: woocommerce-MyAccount-navigation-link--edit-account;
+}
+.woocommerce-MyAccount-navigation-link--customer-logout {
+  grid-area: woocommerce-MyAccount-navigation-link--customer-logout;
+}
+
+//===================================Responsive layouts for nav components=============================================//
+@include mqMin(37.5rem) {
+  .woocommerce-MyAccount-navigation ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    grid-auto-flow: row;
+  }
+
+  .woocommerce-MyAccount-navigation-link--dashboard {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .woocommerce-MyAccount-navigation-link--orders {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .woocommerce-MyAccount-navigation-link--subscriptions {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  .woocommerce-MyAccount-navigation-link--downloads {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+
+  .woocommerce-MyAccount-navigation-link--bookings {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+
+  .woocommerce-MyAccount-navigation-link--account-wishlists {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .woocommerce-MyAccount-navigation-link--wc-smart-coupons {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .woocommerce-MyAccount-navigation-link--edit-address {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+
+  .woocommerce-MyAccount-navigation-link--payment-methods {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+
+  .woocommerce-MyAccount-navigation-link--edit-account {
+    grid-area: 2 / 5 / 3 / 6;
+  }
+
+  .woocommerce-MyAccount-navigation-link--customer-logout {
+    grid-area: 3 / 1 / 4 / 6;
+  }
+}
+
+//Adding icons to list items
+
+.woocommerce-MyAccount-navigation-link--dashboard::after {
+  @include myAccountIcons("./icons/dashboard.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--orders::after {
+  @include myAccountIcons("./icons/orders.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--subscriptions::after {
+  @include myAccountIcons("./icons/subscriptions.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--downloads::after {
+  @include myAccountIcons("./icons/download.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--bookings::after {
+  @include myAccountIcons("./icons/bookings.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--account-wishlists::after {
+  @include myAccountIcons("./icons/wishlist.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--wc-smart-coupons::after {
+  @include myAccountIcons("./icons/coupons.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--edit-address::after {
+  @include myAccountIcons("./icons/addresses.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--payment-methods::after {
+  @include myAccountIcons("./icons/payments.svg");
+}
+
+.woocommerce-MyAccount-navigation-link--edit-account::after {
+  @include myAccountIcons("./icons/account.svg");
+}
+
+//grid properties to seperate welcome message from nav icons
+
+#post-26 {
+  .woocommerce {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+// 'Login' title was appearing on bottom of content with column property set. Changed to column reverse when .login-page class is triggered on body
+
+.logged-in {
+  #post-26 {
+    .woocommerce {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.woocommerce-MyAccount-navigation-link:not(.woocommerce-MyAccount-navigation-link--customer-logout) {
+  height: 110px;
+  width: 110px;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  border-radius: 9px;
+  padding: 0.6rem 0.3rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  @include mqMin(37.5rem) {
+    border-radius: 8px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color__accent;
+
+    a {
+      color: white;
+    }
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  }
+}
+
+.woocommerce-MyAccount-navigation-link a {
+  padding-bottom: 70px;
+  z-index: 2;
+}
+
+//changing these a tags line height properties so they fill the content on the whole card
+
+.woocommerce-MyAccount-navigation-link--payment-methods a,
+.woocommerce-MyAccount-navigation-link--edit-account a {
+  line-height: 1;
+}
+
+//=======================Logout Button Stylings==============//
+
+.woocommerce-MyAccount-navigation-link--customer-logout {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  font-family: $font__cta;
+  background-color: $color__CTA-secondary;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+  &:active {
+    filter: brightness(0.9);
+  }
+  &:focus-visible {
+    border: 4px solid $color__link-hover;
+  }
+}
+
+.woocommerce-MyAccount-navigation-link--customer-logout a {
+  display: block;
+  margin: auto;
+  color: white;
+  padding: 0;
+}
+
+//============================================================================END OF ICON CARDS=================================================//
+
+//-----------H1 heading-------------------------------
+#post-26 {
+  .entry-header {
+    h1 {
+      text-align: center;
+      margin-bottom: 0;
+      font-size: 1.75rem;
+    }
+  }
+  .entry-content {
+    .woocommerce {
+      h2 {
+        padding-bottom: 0;
+      }
+    }
+    .woocommerce-LostPassword {
+      margin-top: 0;
+    }
+    @include mqMin(35rem) {
+      .woocommerce {
+        width: 45rem;
+
+        .woocommerce-button {
+          margin-right: 7.5rem;
+        }
+      }
+    }
+  }
+  @include mqMin(35rem) {
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+}
+
+.woocommerce-MyAccount-content {
+  max-width: 35rem;
+  width: 100%;
+  margin: 1rem auto 3rem;
+  font-family: $font__text;
+}
+
+//===================================Orders Component====================//
+.woocommerce-orders-table {
+  td::before {
+    font-weight: bold;
+  }
+}
+
+//===================================Subscriptions Component====================//
+.woocommerce_account_subscriptions {
+  .woocommerce-Button {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+}
+
+//==================================downloads component=====================//
+
+.woocommerce-MyAccount-content {
+  .woocommerce-Message--info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+//====================================bookings component===================//
+
+.my_account_bookings {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+
+  .booked-product {
+    padding: 0 0.5rem;
+  }
+}
+
+//================================== edit account component =================//
+
+.woocommerce-EditAccountForm {
+  label {
+    display: inline-block;
+    width: 9.375rem;
+    text-align: left;
+    @include mqMin(24.4375rem) {
+      text-align: right;
+    }
+  }
+
+  em {
+    display: block;
+  }
+
+  button {
+    @include ctaPrimaryStyles;
+  }
+
+  fieldset {
+    label {
+      display: block;
+      margin-right: 0;
+      text-align: left;
+    }
+    .woocommerce-form-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+///===============================Account login page========================//
+.woocommerce-form-login {
+  .woocommerce-form-row {
+    display: inline-block;
+    justify-content: center;
+    width: 15rem;
+    margin-left: 5rem;
+    // align-items: center;
+  }
+  label {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: .5rem;
+    text-align: left;
+  
+    @include mqMin(24.4375rem) {
+      text-align: left;
+    }
+  }
+
+  em {
+    display: block;
+  }
+
+  button {
+    margin-top: 1.5rem;
+    @include ctaPrimaryStyles;
+  }
+}
